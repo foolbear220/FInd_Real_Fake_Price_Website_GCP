@@ -48,6 +48,9 @@
     <Folder Include="FInd_Real_Fake_Price_Website\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FInd_Real_Fake_Price_Website\app.yaml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="FInd_Real_Fake_Price_Website\static\css\style.css" />
     <Content Include="FInd_Real_Fake_Price_Website\static\img\fake.png" />
     <Content Include="FInd_Real_Fake_Price_Website\static\img\lg.dna-spin-spiral-preloader.gif" />
