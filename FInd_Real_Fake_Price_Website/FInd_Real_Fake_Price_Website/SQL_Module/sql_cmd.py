@@ -1,13 +1,14 @@
 import pymysql
 import json
 import csv
-
+import os
 
 def connect_database():
     try:
         global db 
         global cursor
-        db = pymysql.connect("35.221.243.240","root","Wen_78220","price")
+        #db = pymysql.connect("35.221.243.240","root","Wen_78220","price")
+        db = pymysql.connect(unix_socket='/cloudsql/studied-brace-219309:asia-east1:price',user='root',password='Wen_78220',db='price')
         cursor = db.cursor()
         print("Access Success")
     except:
@@ -310,11 +311,12 @@ roadlist_ansi = []
 def init_roadlist():
     global roadlist_utf8
     global roadlist_ansi
-    with open('C:\\Users\\WEN\source\\repos\\FInd_Real_Fake_Price_Website\\FInd_Real_Fake_Price_Website\\FInd_Real_Fake_Price_Website\\opendata107road_UTF8.csv', newline='', encoding='utf-8') as csvfile_utf8:
+    SaveDirectory = os.getcwd() #印出目前工作目錄
+    with open(SaveDirectory+'/FInd_Real_Fake_Price_Website/opendata107road_UTF8.csv', newline='', encoding='utf-8') as csvfile_utf8:
         csv_reader_utf8 = csv.reader(csvfile_utf8)
         for row in csv_reader_utf8:
             roadlist_utf8.append(row)
-    with open('C:\\Users\\WEN\source\\repos\\FInd_Real_Fake_Price_Website\\FInd_Real_Fake_Price_Website\\FInd_Real_Fake_Price_Website\\opendata107road.csv', newline='', encoding='ANSI') as csvfile_ansi:
+    with open(SaveDirectory+'/FInd_Real_Fake_Price_Website/opendata107road.csv', newline='', encoding='utf-8') as csvfile_ansi:
         csv_reader_ansi = csv.reader(csvfile_ansi)
         for row in csv_reader_ansi:
             roadlist_ansi.append(row)
