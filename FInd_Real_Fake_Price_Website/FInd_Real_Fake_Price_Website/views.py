@@ -13,9 +13,6 @@ import csv
 #User Define
 from FInd_Real_Fake_Price_Website.SQL_Module.sql_cmd import connect_database,search_database,road_search,section_search,search_database_real,test,init_roadlist
 
-# If `entrypoint` is not defined in app.yaml, App Engine will look for an app
-# called `app` in `main.py`.
-app = Flask(__name__)
 
 @app.route('/')
 @app.route('/home')
@@ -109,12 +106,6 @@ def js_search_real():
    response_real = make_response(json.dumps(result_list_real))
    response_real.content_type = 'application/json'
    return response_real
-
-if __name__ == '__main__':
-    # This is used when running locally only. When deploying to Google App
-    # Engine, a webserver process such as Gunicorn will serve the app. This
-    # can be configured by adding an `entrypoint` to app.yaml.
-    app.run(host='127.0.0.1', port=8080, debug=True)
 
 
 
