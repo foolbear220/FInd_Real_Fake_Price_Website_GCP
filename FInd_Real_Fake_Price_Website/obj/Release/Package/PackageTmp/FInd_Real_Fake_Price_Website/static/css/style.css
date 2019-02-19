@@ -1,0 +1,571 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.wrap {
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 100vh;
+    overflow: auto;
+    position: relative;
+}
+
+.end-header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #DCDCDC;
+    text-align:center;
+}
+
+.top-header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #DCDCDC;
+}
+
+    .top-header .menu-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 18px 20px;
+    }
+
+.fix-search .top-header {
+    background: #eee;
+}
+
+.search {
+    position: absolute;
+    width:90%;
+    left:5%;
+    top:100px;
+    background-color:lightblue;
+}
+
+    .search input {
+        width: 265px;
+        border: 1px solid #ccc;
+        padding: 8px;
+        font-size: 15px;
+        transition: width 0.2s;
+        -webkit-appearance: none;
+    }
+
+
+.fix-tr .tr[id$='_lock'] {
+    background-color: aquamarine;
+    width:96.5%;
+    position: fixed;
+    top: 1px;
+}
+
+
+
+.top {
+    height: 250px;
+    padding-top: 40px;
+    background-color:bisque;
+}
+
+.hero {
+    width: 200px;
+    height: 100px;
+    background: #ccc;
+    margin: 0 auto;
+}
+
+main {
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main div {
+    width: 125px;
+    height: 80px;
+    background: #ccc;
+    margin: 0 0 20px 0;
+}
+
+#demo-table, .css-table {
+    width: 95%;
+    margin: auto;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+
+    #demo-table td, #demo-table th,
+    .css-table .td, .css-table .th {
+        padding: 5px;
+    }
+
+    #demo-table td,
+    .css-table .td {
+        color: #666666;
+        border: #ddd 1px solid;
+    }
+
+    #demo-table th,
+    .css-table .th {
+        background-color: #1a1a1a;
+        color: #ffffff;
+        border: #1a1a1a 1px solid;
+        text-align: left;
+    }
+
+
+.css-table {
+    display: table;
+}
+
+    .css-table .thead {
+        display: table-header-group;
+    }
+
+    .css-table .tbody {
+        display: table-row-group;
+    }
+
+    .css-table .tr {
+        display: table-row;
+    }
+
+    .css-table .tr .collapse{
+
+    }
+
+    .css-table .th,
+    .css-table .td {
+        display: table-cell;
+    }
+
+
+@media only screen and (max-width: 960px) {
+    .hide-column .large {
+        display: none;
+    }
+
+    .css-table {
+        background-color: transparent;
+    }
+
+        .css-table .thead {
+            display: none;
+        }
+
+        .css-table .tr {
+            display: block;
+            border: #ddd 1px solid;
+            margin-bottom: 5px;
+            background: #ffffff;
+        }
+
+        .css-table .th,
+        .css-table .td {
+            display: inline-block;
+            width: 48%;
+            border: none;
+        }
+
+        .css-table .td:before {
+            content: attr(data-title);
+        }
+}
+
+@media only screen and (max-width: 720px) {
+    .hide-column .mobile {
+        display: none;
+    }
+
+    .scroll-left:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+
+    .scroll-left thead:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+
+    .scroll-left {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+        .scroll-left th,
+        .scroll-left td {
+            margin: 0;
+            vertical-align: top;
+        }
+
+        .scroll-left th {
+            text-align: left;
+        }
+
+    .scroll-left {
+        display: block !important;
+        position: relative;
+        width: 100%;
+    }
+
+        .scroll-left thead {
+            display: block;
+            float: left;
+        }
+
+        .scroll-left tbody {
+            display: block;
+            width: auto;
+            position: relative;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .scroll-left thead tr {
+            display: block;
+        }
+
+        .scroll-left th {
+            display: block;
+            text-align: right;
+        }
+
+        .scroll-left tbody tr {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0px -2px;
+        }
+
+        .scroll-left td {
+            display: block;
+            min-height: 1.25em;
+            text-align: left;
+        }
+
+        /* sort out borders */
+        .scroll-left th {
+            border-bottom: 0;
+            border-left: 0;
+        }
+
+        .scroll-left td {
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 0;
+        }
+
+        .scroll-left tbody tr { /*border-left: 1px solid #babcbf;*/
+        }
+
+        .scroll-left th:last-child,
+        .scroll-left td:last-child {
+            border-bottom: 1px solid #babcbf;
+        }
+
+
+    /* Force table to not be like tables anymore */
+    .break-table {
+        background-color: transparent !important;
+    }
+
+        .break-table,
+        .break-table thead,
+        .break-table tbody,
+        .break-table th,
+        .break-table td,
+        .break-table tr {
+            display: block;
+        }
+
+            /* Hide table headers (but not display: none;, for accessibility) */
+            .break-table thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            .break-table tr {
+                border: 1px solid #ccc;
+                margin-bottom: 10px;
+                background-color: #ffffff;
+            }
+
+            .break-table td {
+                /* Behave  like a "row" */
+                border: none !important;
+                border-bottom: 1px solid #eee !important;
+                position: relative;
+                padding-left: 35% !important;
+                white-space: normal;
+                text-align: left;
+
+            }
+
+                .break-table td:before {
+                    /* Now like a table header */
+                    position: absolute;
+                    /* Top/left values mimic padding */
+                    top: 6px;
+                    left: 6px;
+                    width: 30%;
+                    padding-right: 10px;
+                    white-space: nowrap;
+                    text-align: left;
+                    font-weight: bold;
+                    color: #1a1a1a;
+                }
+
+                .break-table td:before {
+                    content: attr(data-title);
+                }
+
+    .css-table .th,
+    .css-table .td {
+        display: block;
+        width: 100%;
+    }
+
+    .css-table .td:before {
+        content: attr(data-title);
+    }
+}
+
+/*the container must be positioned relative:*/
+.custom-select {
+    position: relative;
+    font-family: Arial;
+}
+
+    .custom-select select {
+        display: none; /*hide original SELECT element:*/
+    }
+
+.select-selected {
+    background-color: DodgerBlue;
+}
+    /*style the arrow inside the select element:*/
+    .select-selected:after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #fff transparent transparent transparent;
+    }
+    /*point the arrow upwards when the select box is open (active):*/
+    .select-selected.select-arrow-active:after {
+        border-color: transparent transparent #fff transparent;
+        top: 7px;
+    }
+/*style the items (options), including the selected item:*/
+.select-items div, .select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+
+#loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../img/lg.dna-spin-spiral-preloader.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+}
+
+
+.md-select {
+    /*Demo css do not add to your project*/
+    background-color: #66CDAA;
+    position: relative;
+    top: 5%;
+    width: 95%;
+    /*--*/
+    display: block;
+    margin: auto;
+    /*  position: relative;*/
+}
+
+    .md-select *, .md-select :after, .md-select :before {
+        box-sizing: border-box;
+    }
+
+    .md-select [type=button] {
+        background: #fff;
+        border-color: rgba(0, 0, 0, 0.12);
+        border-width: 0 0 1px 0;
+        color: rgba(0, 0, 0, 0.73);
+        cursor: default;
+        display: block;
+        line-height: 48px;
+        padding: 2px 0 1px 16px;
+        position: relative;
+        text-align: left;
+        text-shadow: none;
+        width: 70%;
+        z-index: 1;
+        outline: none;
+        overflow: hidden;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        left:50%;
+        margin:auto;
+    }
+
+        .md-select [type=button]:focus, .md-select [type=button]:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .md-select [type=button]:after {
+            content: '\25be';
+            float: right;
+            padding-right: 16px;
+        }
+
+    .md-select ul[role=listbox] {
+        background-color: white;
+        cursor: default;
+        list-style: none;
+        line-height: 26px;
+        overflow: hidden;
+        margin: 0;
+        max-height: 0;
+        position: relative;
+        left:50%;
+        padding: 0;
+        transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
+        width: 70%;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
+    }
+
+        .md-select ul[role=listbox] li {
+            height: 48px;
+            margin: 0;
+            padding: 10px 16px;
+            outline: none;
+            overflow: hidden;
+        }
+
+            .md-select ul[role=listbox] li:focus, .md-select ul[role=listbox] li:hover, .md-select ul[role=listbox] li.active {
+                background: rgba(0, 0, 0, 0.1);
+            }
+
+    .md-select.active ul {
+        max-height: 300px;
+        overflow: auto;
+        padding: 8px 0 16px 0px;
+        z-index: 2;
+        transition: all 0.2s ease;
+    }
+
+
+    /**Buttom Begin**/
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+        
+    }
+
+    .button5 {
+        background-color: white;
+        color: black;
+        border: 2px solid #555555;
+    }
+
+    .button5:hover {
+        background-color: #555555;
+        color: white;
+    }
+    /**Buttom End**/
+
+.footer {
+    position:absolute;
+    bottom:-60px;
+
+    background-color: #DCDCDC;
+    text-align: center;
+}

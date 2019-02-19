@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Real V.S Fake </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>    
+    </style>
+</head>
+<body>
+    <div id="loader"></div>
+    <div class="wrap" id="wrap">
+  
+      <header class="top-header">
+        <span class="menu-icon">☰</span>
+      </header>
+            <div id="regionlist" class="md-select">
+              <label for="ul-id" style="width:100%;margin-top:30px;margin-bottom:10px"><button type="button" class="ng-binding" style="left:0px">縣市</button></label>
+              <ul role="listbox" id="ul-id" class="md-whiteframe-z1"  name="ul-id" style="left:50%;transform: translate(-50%, 0%);">
+                <li role="option" class="ng-binding ng-scope active" tabindex="-1" aria-selected="true">台北市</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">新北市</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">桃園市</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">台中市</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">台南市</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">高雄市</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">基隆市</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">新竹縣</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">新竹市</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">苗栗縣</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">南投縣</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">彰化縣</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">雲林縣</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">嘉義縣</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">嘉義市</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">屏東縣</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">台東縣</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">嘉義市</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">屏東縣</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">花蓮縣</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">宜蘭縣</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">澎湖縣</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">金門縣</li>
+                <!--<li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">連江縣</li>-->
+              </ul>
+            </div>
+
+        <div id="sectionlist" class="md-select">
+          <label for="ul-id1" style="width:100%;margin-bottom:10px"><button type="button" class="ng-binding" style="left:0px">轄區</button></label>
+          <ul role="listbox" id="ul-id1" class="md-whiteframe-z1" name="ul-id1" style="left:50%;transform: translate(-50%, 0%);">
+          </ul>
+        </div>
+
+        <div id="roadlist" class="md-select">
+          <label for="ul-id2" style="width:100%;margin-bottom:10px"><button type="button" class="ng-binding" style="left:0px">道路</button></label>
+          <ul role="listbox" id="ul-id2" class="md-whiteframe-z1" name="ul-id2" style="left:50%;transform: translate(-50%, 0%);">
+          </ul>
+        </div>
+
+        <div id="yearlist" class="md-select">
+            <label for="ul-id3" style="width:100%;margin-bottom:10px"><button type="button" class="ng-binding" style="left:0px">年</button></label>
+            <ul role="listbox" id="ul-id3" class="md-whiteframe-z1"  name="ul-id3" style="left:50%;transform: translate(-50%, 0%);">
+            <li role="option" class="ng-binding ng-scope active" tabindex="-1" aria-selected="true">2018</li>
+            <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">2017</li>
+            <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">2016</li>
+            <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">2015</li>
+            <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">2014</li>
+            <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">2013</li>
+            </ul>
+        </div>
+        
+        <div id="typelist" class="md-select">
+          <label for="ul-id4" style="width:100%;margin-bottom:10px"><button type="button" class="ng-binding" style="left:0px">型態</button></label>
+          <ul role="listbox" id="ul-id4" class="md-whiteframe-z1" name="ul-id4" style="left:50%;transform: translate(-50%, 0%);">
+                <li role="option" class="ng-binding ng-scope active" tabindex="-1" aria-selected="true">電梯大樓</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">公寓</li>
+                <li role="option" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">透天/別墅</li>
+          </ul>
+        </div>
+
+        <div  class="md-select" style="padding-bottom:30px">
+            <button class="button button5" onclick="Search_Function()" style="width:70%;left:50%;margin:auto;position:relative;transform: translate(-50%, 0%);">收尋</button>
+        </div>
+            
+      <div id ="lock_real_id" style="display:none"></div>
+       <div id ="lock_real_position_top" style="display:none"></div>
+	    <div id="css-table" class="css-table" style="margin-top:100px;position:relative">
+		    <div id="thead" class="thead">
+			    <div class="tr">
+                    <div class="th">實價/開價</div>
+                    <div class="th">建立時間</div>
+                    <div class="th">縣市</div>
+                    <div class="th">轄區</div>
+                    <div class="th">形態</div>
+                    <div class="th">格局</div>
+                    <div class="th">樓層</div>
+                    <div class="th">權狀</div>
+                    <div class="th">屋齡</div>
+                    <div class="th">地址</div>
+                    <div class="th">價格</div>
+			    </div>
+		    </div>
+		    <div class="tbody" id="houseinfo_real">
+		    </div>
+	    </div>
+        <div id="enddiv" style="position:absolute;bottom:0px;left:0px;right:0px;background-color:#DCDCDC;height:60px;line-height: 60px;width:100%;text-align:center;vertical-align:middle;">
+            Contact us：peoplearekungfumaster@gmail.com
+        </div>
+    </div>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/static/js/user_define.js"></script>
+    <script src="/static/js/select.js"></script>
+    <script>
+
+
+    </script>
+</body>
+</html>

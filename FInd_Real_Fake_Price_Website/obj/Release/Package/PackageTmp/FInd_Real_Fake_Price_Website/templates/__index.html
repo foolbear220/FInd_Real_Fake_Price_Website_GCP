@@ -1,0 +1,782 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>uiCookies:Haus &mdash; Free Bootstrap Theme, Free Responsive Bootstrap Website Template</title>
+    <meta name="description" content="Free Bootstrap Theme by uicookies.com">
+    <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles-merged.css">
+    <link rel="stylesheet" href="/static/css/style.min.css">
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+    <style>       
+
+    #demo-table,.css-table{
+	    width: 99.9%;
+	    background-color: #ffffff;
+	    border-collapse: collapse;
+	    margin-bottom: 20px;
+    }
+
+    #demo-table td, #demo-table th,
+    .css-table .td, .css-table .th{
+	    padding: 5px;
+    }
+
+    #demo-table td,
+    .css-table .td{
+	    color: #666666;
+	    border: #ddd 1px solid;
+    }
+
+    #demo-table th,
+    .css-table .th{
+	    background-color: #1a1a1a;
+	    color:#ffffff;
+	    border: #1a1a1a 1px solid;
+	    text-align: left;
+    }
+
+
+    .css-table{
+	    display: table;
+
+    }
+    .css-table .thead{
+	    display:table-header-group;
+    }
+    .css-table .tbody{
+	    display:table-row-group;
+    }
+    .css-table .tr{
+	    display:table-row;
+    }
+    .css-table .th,
+    .css-table .td{
+	    display:table-cell;
+    }
+
+
+    @media only screen and (max-width: 960px) {
+	    .hide-column .large{
+		    display: none;
+	    }
+	    .css-table{
+		    background-color: transparent;
+	    }
+	    .css-table .thead{
+		    display: none;
+	    }
+	    .css-table .tr{
+		    display:block;
+		    border: #ddd 1px solid;
+		    margin-bottom: 5px;
+		    background: #ffffff;
+	    }
+	    .css-table .th,
+	    .css-table .td{
+		    display:inline-block;
+		    width: 48%;
+		    border: none;
+	    }
+    }
+    @media only screen and (max-width: 720px) {
+	    .hide-column .mobile{
+		    display: none;
+	    }
+
+	    .scroll-left:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+	    .scroll-left thead:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+	    .scroll-left{ width: 100%; border-collapse: collapse; border-spacing: 0; }
+	    .scroll-left th,
+	    .scroll-left td { margin: 0; vertical-align: top; }
+	    .scroll-left th { text-align: left; }
+	    .scroll-left{ display: block!important; position: relative; width: 100%; }
+	    .scroll-left thead { display: block; float: left; }
+	    .scroll-left tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
+	    .scroll-left thead tr { display: block; }
+	    .scroll-left th { display: block; text-align: right; }
+	    .scroll-left tbody tr { display: inline-block; vertical-align: top; margin:0px -2px;}
+	    .scroll-left td { display: block; min-height: 1.25em; text-align: left; }
+
+	    /* sort out borders */
+	    .scroll-left th { border-bottom: 0; border-left: 0; }
+	    .scroll-left td { border-left: 0; border-right: 0; border-bottom: 0; }
+	    .scroll-left tbody tr { /*border-left: 1px solid #babcbf;*/ }
+	    .scroll-left th:last-child,
+	    .scroll-left td:last-child { border-bottom: 1px solid #babcbf; }
+
+
+	    /* Force table to not be like tables anymore */
+	    .break-table{
+		    background-color: transparent !important;  
+	    }
+	    .break-table, 
+	    .break-table thead, 
+	    .break-table tbody, 
+	    .break-table th, 
+	    .break-table td, 
+	    .break-table tr { 
+		    display: block; 
+	    }
+
+	    /* Hide table headers (but not display: none;, for accessibility) */
+	    .break-table thead tr { 
+		    position: absolute;
+		    top: -9999px;
+		    left: -9999px;
+	    }
+
+	    .break-table tr { border: 1px solid #ccc; margin-bottom: 10px; background-color: #ffffff;}
+
+	    .break-table td { 
+		    /* Behave  like a "row" */
+		    border: none !important;
+		    border-bottom: 1px solid #eee !important;  
+		    position: relative;
+		    padding-left: 35% !important; 
+		    white-space: normal;
+		    text-align:left;
+	    }
+
+	    .break-table td:before { 
+		    /* Now like a table header */
+		    position: absolute;
+		    /* Top/left values mimic padding */
+		    top: 6px;
+		    left: 6px;
+		    width: 30%; 
+		    padding-right: 10px; 
+		    white-space: nowrap;
+		    text-align:left;
+		    font-weight: bold;
+		    color: #1a1a1a;
+	    }
+	    .break-table td:before { content: attr(data-title); }
+
+	    .css-table .th,
+	    .css-table .td{
+		    display:block;
+		    width: 100%;
+            content: attr(data-title);
+	    }
+    }
+    </style>
+  </head>
+  <body>
+
+  <!-- START: header -->
+  <div class="probootstrap-loader"></div>
+
+  <header role="banner" class="probootstrap-header">
+    <div class="container">
+        <a href="index.html" class="probootstrap-logo">Haus<span>.</span></a>
+        
+        <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
+        <div class="mobile-menu-overlay"></div>
+
+        <nav role="navigation" class="probootstrap-nav hidden-xs">
+          <ul class="probootstrap-main-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="agents.html">Agents</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="extra-text visible-xs"> 
+            <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
+            <h5>Address</h5>
+            <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+            <h5>Connect</h5>
+            <ul class="social-buttons">
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-facebook2"></i></a></li>
+              <li><a href="#"><i class="icon-instagram2"></i></a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+  </header>
+  <!-- END: header -->
+  <section class="probootstrap-slider flexslider" >
+    <div class="probootstrap-wrap-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+
+            <div class="probootstrap-home-search probootstrap-animate">
+              <!-- <form action="/search" method="post">-->
+                <h2 class="heading">Search your next dream home here</h2>
+                <div class="probootstrap-field-group">
+                  <!--<div class="probootstrap-fields">
+                                          
+                    <div class="search-category">
+                      <i class="icon-chevron-down"></i>
+                      <select name="regionlist" id="regionlist" class="form-control" onchange="Region_SelectChange()" >
+                          {% for region in regionlist %}
+                            <option value="">{{region}}</option>
+                          {% endfor %}
+                      </select>
+                    </div>
+
+                    <div class="search-category">
+                      <i class="icon-chevron-down"></i>
+                      <select name="sectionlist" id="sectionlist" class="form-control" onchange="Section_SelectChange()">
+                          {% for section in sectionlist %}
+                            <option value="">{{section}}</option>
+                          {% endfor %}
+                      </select>
+                    </div>
+
+                    <div class="search-category">
+                      <i class="icon-chevron-down"></i>
+                      <select name="roadlist" id="roadlist" class="form-control" onchange="Road_SelectChange()">
+                          {% for road in roadlist %}
+                            <option value="">{{road}}</option>
+                          {% endfor %}
+                      </select>
+                    </div>
+
+
+                    <div class="search-category">
+                      <i class="icon-chevron-down"></i>
+                      <select name="yearlist" id="yearlist" class="form-control" onchange="">
+                            <option selected>2018</option>
+                            <option >2017</option>
+                            <option >2016</option>
+                            <option >2015</option>
+                            <option >2014</option>
+                            <option >2013</option>
+                            <option >2012</option>
+                            <option >2011</option>
+                            <option >2010</option>
+                            <option >2009</option>
+                            <option >2008</option>
+                      </select>
+                    </div>
+
+                    <div class="search-category">
+                      <i class="icon-chevron-down"></i>
+                      <select name="typelist" id="typelist" class="form-control" onchange="">
+                            <option selected>電梯大樓</option>
+                            <option >公寓</option>
+                            <option >透天/別墅</option>
+                      </select>
+                    </div>
+
+                  </div> -->
+
+                      <select name="regionlist" id="regionlist" class="form-control" onchange="Region_SelectChange()" >
+                          {% for region in regionlist %}
+                            <option value="">{{region}}</option>
+                          {% endfor %}
+                      </select>
+
+                      <select name="sectionlist" id="sectionlist" class="form-control" onchange="Section_SelectChange()">
+                          {% for section in sectionlist %}
+                            <option value="">{{section}}</option>
+                          {% endfor %}
+                      </select>
+
+                      <select  name="roadlist" id="roadlist" class="form-control" onchange="Road_SelectChange()" >
+                          {% for road in roadlist %}
+                            <option value="">{{road}}</option>
+                          {% endfor %}
+                      </select>
+
+                      <select name="yearlist" id="yearlist" class="form-control" onchange="">
+                            <option selected>2018</option>
+                            <option >2017</option>
+                            <option >2016</option>
+                            <option >2015</option>
+                            <option >2014</option>
+                            <option >2013</option>
+                            <option >2012</option>
+                            <option >2011</option>
+                            <option >2010</option>
+                            <option >2009</option>
+                            <option >2008</option>
+                      </select>
+
+                    <select name="typelist" id="typelist" class="form-control" onchange="" >
+                        <option selected>電梯大樓</option>
+                        <option >公寓</option>
+                        <option >透天/別墅</option>
+                    </select>
+
+
+                    <button class="btn btn-success" onclick="Search_Function()"><i class="icon-magnifying-glass t2"></i> Start Search</button>
+                  
+                <!--<button class="btn btn-success" type="submit" onclick="Search_Function()"><i class="icon-magnifying-glass t2"></i> Start Search</button>-->
+                </div>
+              <!--</form> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="slides">
+      <li style="background-image: url(/static/img/slider_1.jpg);" class="overlay"></li>
+      <li style="background-image: url(/static/img/slider_4.jpg);" class="overlay"></li>
+      <li style="background-image: url(/static/img/slider_2.jpg);" class="overlay"></li>
+    </ul>
+  </section>
+     
+
+   
+  <section class="probootstrap-section probootstrap-section-lighter" >
+			<div id="css-table" class="css-table">
+				<div class="thead">
+					<div class="tr">
+						<div class="th">門市編號</div>
+						<div class="th">門市類型</div>
+						<div class="th">門市名稱</div>
+						<div class="th">門市地址</div>
+						<div class="th">門市電話</div>
+						<div class="th">門市地圖</div>
+					</div>
+				</div>
+				<div class="tbody">
+					<div class="tr">
+						<div class="td">01</div>
+						<div class="td">品牌形象店</div>
+						<div class="td">信義威秀旗艦店</div>
+						<div class="td">臺北市信義區松壽路18號</div>
+						<div class="td">04-22228888</div>
+						<div class="td">我的地圖我的地圖點我</div>
+					</div>
+					<div class="tr focus">
+						<div class="td">02</div>
+						<div class="td">品牌形象店</div>
+						<div class="td">鈺鴻鐘錶(西門町neoWEST旗艦店)</div>
+						<div class="td">臺北市萬華區西寧南路125號</div>
+						<div class="td">04-22228888</div>
+						<div class="td">我的地圖我的地圖點我</div>
+					</div>
+					<div class="tr">
+						<div class="td">03</div>
+						<div class="td">品牌形象店</div>
+						<div class="td">綺華麗(信義新天地A4館)	</div>
+						<div class="td">臺北市信義區松高路19號3樓</div>
+						<div class="td">04-22228888</div>
+						<div class="td">我的地圖我的地圖點我</div>
+					</div>
+					<div class="tr">
+						<div class="td">04</div>
+						<div class="td">品牌形象店</div>
+						<div class="td">精光堂(太平洋SOGO百貨-忠孝館)</div>
+						<div class="td">臺北市大安區忠孝東路四段45號7樓</div>
+						<div class="td">04-22228888</div>
+						<div class="td">我的地圖我的地圖點我</div>
+					</div>
+					<div class="tr">
+						<div class="td">05</div>
+						<div class="td">品牌形象店</div>
+						<div class="td">精光堂(大葉高島屋)</div>
+						<div class="td">臺北市士林區忠誠路2段55號4樓</div>
+						<div class="td">04-22228888</div>
+						<div class="td">我的地圖我的地圖點我</div>
+					</div>
+					<div class="tr">
+						<div class="td">06</div>
+						<div class="td">品牌形象店</div>
+						<div class="td">銓盛鐘錶(台北美麗華百樂園)</div>
+						<div class="td">臺北市中山區敬業三路20號2樓</div>
+						<div class="td">04-22228888</div>
+						<div class="td">我的地圖我的地圖點我</div>
+					</div>
+					<div class="tr">
+						<div class="td">07</div>
+						<div class="td">品牌形象專區</div>
+						<div class="td">瓦吉鐘錶</div>
+						<div class="td">臺北市士林區大東路13號</div>
+						<div class="td">04-22228888</div>
+						<div class="td">我的地圖我的地圖點我</div>
+					</div>
+				</div>
+			</div>
+  </section>
+  <!--End Section-->
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="/static/js/scripts.min.js"></script>
+  <script src="/static/js/main.min.js"></script>
+  <script src="/static/js/custom.js"></script>
+  <script src="https://unpkg.com/floatthead"></script>
+    <script>
+
+        function Section_SelectChange()
+        {
+            var region_select_index = document.getElementById("regionlist").selectedIndex;
+            var region_select_list = document.getElementById("regionlist").options;
+            var region = region_select_list[region_select_index].innerHTML
+            
+            var section_select_index = document.getElementById("sectionlist").selectedIndex;
+            var section_select_list = document.getElementById("sectionlist").options;
+            var section = section_select_list[section_select_index].innerHTML
+            data_tmp = { 'region':region ,'section':section};  // data to send to server.
+
+            //清除舊的sectionlist
+            //using the function:
+            removeOptions(document.getElementById("roadlist"));
+
+            $.post('/js_section_selectchange', data_tmp, function (data) {
+                for (i = 0; i < data.length; i++) {
+                    var x = document.getElementById("roadlist");
+                    var option = document.createElement("option");
+                    option.text = data[i];
+                    x.add(option);
+                }
+            }); 
+        }
+
+        function Region_SelectChange()
+        {
+            
+            var region_select_index = document.getElementById("regionlist").selectedIndex;
+            var region_select_list = document.getElementById("regionlist").options;
+            var region = region_select_list[region_select_index].innerHTML
+            data_tmp = { 'region': region };  // data to send to server.
+
+            //清除舊的sectionlist
+            //using the function:
+            removeOptions(document.getElementById("sectionlist"));
+
+            $.post('/js_region_selectchange', data_tmp, function (data) {
+                for (i = 0; i < data.length; i++) {
+                    var x = document.getElementById("sectionlist");
+                    var option = document.createElement("option");
+                    option.text = data[i];
+                    x.add(option);
+                }
+
+                Section_SelectChange()
+
+            }); 
+        }
+
+        function removeOptions(selectbox)
+        {
+            var i;
+            for(i = selectbox.options.length - 1 ; i >= 0 ; i--)
+            {
+                selectbox.remove(i);
+            }
+        }
+
+        function toDateTime(secs) {
+            var t = new Date(1970, 0, 1); // Epoch
+            t.setSeconds(secs);
+            return t;
+        }
+
+        function Search_Function()
+        {
+            /*
+            var table_length = document.getElementById("houseinfo").rows.length;
+            for (i = table_length-1; i >0 ; i--) { 
+                document.getElementById("houseinfo").deleteRow(i);
+            }
+
+            var region_select_index = document.getElementById("regionlist").selectedIndex;
+            var region_select_list = document.getElementById("regionlist").options;
+            var region = region_select_list[region_select_index].innerHTML;
+
+            var section_select_index = document.getElementById("sectionlist").selectedIndex;
+            var section_select_list = document.getElementById("sectionlist").options;
+            var section = section_select_list[section_select_index].innerHTML;
+
+            var road_select_index = document.getElementById("roadlist").selectedIndex;
+            var road_select_list = document.getElementById("roadlist").options;
+            var road = road_select_list[road_select_index].innerHTML;
+
+            var type_select_index = document.getElementById("typelist").selectedIndex;
+            var type_select_list = document.getElementById("typelist").options;
+            var type = type_select_list[type_select_index].innerHTML;
+
+            var year_select_index = document.getElementById("yearlist").selectedIndex;
+            var year_select_list = document.getElementById("yearlist").options;
+            var year = year_select_list[year_select_index].innerHTML;
+
+            data_tmp = {
+                'region': region,
+                'section': section,
+                'road': road,
+                'type': type,
+                'year': year
+            };  // data to send to server.
+            $.post('/js_search', data_tmp, function (data) {
+                for (i = 0; i < data.length;i++) {
+                    var table = document.getElementById("houseinfo");
+                    var row = table.insertRow(0);
+                    var cell_createtime = row.insertCell(0);
+                    var cell_region = row.insertCell(1);
+                    var cell_section = row.insertCell(2);
+                    var cell_type = row.insertCell(3);
+                    var cell_room = row.insertCell(4);
+                    var cell_floor = row.insertCell(5);
+                    var cell_area = row.insertCell(6);
+                    var cell_age = row.insertCell(7);
+                    var cell_address = row.insertCell(8);
+                    var cell_price = row.insertCell(9);
+                    cell_createtime.innerHTML =data[i][16];
+                    cell_region.innerHTML = data[i][3];
+                    cell_section.innerHTML = data[i][4];
+                    cell_type.innerHTML = data[i][2];
+                    cell_room.innerHTML = data[i][6];
+                    cell_floor.innerHTML = data[i][8];
+                    cell_area.innerHTML = data[i][10];
+                    cell_age.innerHTML = data[i][11];
+                    cell_address.innerHTML = data[i][12];
+                    cell_price.innerHTML = data[i][14];
+                }
+
+                var table_length = document.getElementById("houseinfo").rows.length;
+                document.getElementById("houseinfo").deleteRow(table_length-1);
+
+                $('#nav').empty();
+
+                var rowsShown = 10;
+                var rowsTotal = document.getElementById("houseinfo").rows.length;
+                var numPages = Math.ceil(rowsTotal / rowsShown);
+                for(var i=0;i<numPages;i++){
+                   var pageNum=i+1;
+                   $('#nav').append('<a href="#fake_top" rel="'+i+'">'+pageNum+'</a>&nbsp;');
+                }
+
+                $('#houseinfo tr').hide();
+                $('#houseinfo tr').slice(0,rowsShown).show();
+                $('#nav a:first').addClass('active');
+
+
+                $('#nav a').bind('click', function (e) {
+                     
+                     $('#nav a').removeClass('active');    //移除所有頁碼的active類
+                     $(this).addClass('active');           //為當前頁碼加入active類
+                     var currPage=$(this).attr('rel');     //取出頁碼上的值
+                     var startItem=currPage*rowsShown;     //行數的開始=頁碼*每頁顯示的行
+                     var endItem=startItem+rowsShown;      //行數的結束=開始+每頁顯示的行
+                     $('#houseinfo tr').hide();                 //全部行都隱藏
+         
+                     //顯示從開始到結束的行
+                    $('#houseinfo tr').slice(startItem, endItem).css('display', 'table-row');
+                    //alert("T");
+                    //var top = document.getElementById("tt_123").offsetTop; //Getting Y of target element
+                    //window.scrollTo(0, top);                        //Go there directly or some transition
+                     //e.stopPropagation();
+                    //return false;
+                 });
+            });
+            */
+
+            //----Real----//
+            var table_length = document.getElementById("houseinfo_real").rows.length;
+            for (i = table_length - 1; i > 0; i--) {
+                document.getElementById("houseinfo_real").deleteRow(i);
+            }
+
+            var region_select_index = document.getElementById("regionlist").selectedIndex;
+            var region_select_list = document.getElementById("regionlist").options;
+            var region = region_select_list[region_select_index].innerHTML;
+
+            var section_select_index = document.getElementById("sectionlist").selectedIndex;
+            var section_select_list = document.getElementById("sectionlist").options;
+            var section = section_select_list[section_select_index].innerHTML;
+
+            var road_select_index = document.getElementById("roadlist").selectedIndex;
+            var road_select_list = document.getElementById("roadlist").options;
+            var road = road_select_list[road_select_index].innerHTML;
+
+            var type_select_index = document.getElementById("typelist").selectedIndex;
+            var type_select_list = document.getElementById("typelist").options;
+            var type = type_select_list[type_select_index].innerHTML;
+
+            var year_select_index = document.getElementById("yearlist").selectedIndex;
+            var year_select_list = document.getElementById("yearlist").options;
+            var year = year_select_list[year_select_index].innerHTML;
+
+            data_tmp = {
+                'region': region,
+                'section': section,
+                'road': road,
+                'type': type,
+                'year': year
+            };  // data to send to server.
+            $.post('/js_search_real', data_tmp, function (data)
+            {
+                for (i = 0; i < data.length; i++) {
+                    var table = document.getElementById("houseinfo_real");
+                    var row = table.insertRow(0);
+                    row.setAttribute("data-toggle", "collapse");
+                    row.setAttribute("data-target", "." + data[i][0]);
+                    row.setAttribute("id",data[i][0])
+                    var cell_add = row.insertCell(0);
+                    var cell_createtime = row.insertCell(1);
+                    cell_createtime.setAttribute("data-title","建立時間");
+                    var cell_region = row.insertCell(2);
+                    cell_region.setAttribute("data-title","縣市");
+                    var cell_section = row.insertCell(3);
+                    cell_section.setAttribute("data-title","轄區");
+                    var cell_type = row.insertCell(4);
+                    cell_type.setAttribute("data-title","形態");
+                    var cell_room = row.insertCell(5);
+                    cell_room.setAttribute("data-title","格局");
+                    var cell_floor = row.insertCell(6);
+                    cell_floor.setAttribute("data-title","樓層");
+                    var cell_area = row.insertCell(7);
+                    cell_area.setAttribute("data-title","權狀");
+                    var cell_age = row.insertCell(8);
+                    cell_age.setAttribute("data-title","屋齡");
+                    var cell_address = row.insertCell(9);
+                    cell_address.setAttribute("data-title","地址");
+                    var cell_price = row.insertCell(10);
+                    cell_price.setAttribute("data-title","開價");
+                    cell_add.innerHTML = "＋";
+                    cell_createtime.innerHTML = toDateTime(data[i][6]).toLocaleDateString();
+                    //cell_createtime.innerHTML = data[i][6];
+                    cell_region.innerHTML = data[i][2];
+                    cell_section.innerHTML = data[i][3];
+                    cell_type.innerHTML = data[i][1];
+                    cell_room.innerHTML = data[i][4];
+                    cell_floor.innerHTML = data[i][5];
+                    cell_area.innerHTML = ((data[i][13] * 10000) / data[i][14] * 0.3025).toFixed(2);
+                    cell_age.innerHTML = data[i][11];
+                    cell_address.innerHTML = data[i][8];
+                    cell_price.innerHTML = data[i][13];
+                    //alert(data[i][0]);
+                    data_f = {
+                        'region': region,
+                        'section': section,
+                        'road': road,
+                        'type': data[i][1],
+                        'year': year,
+                        'room': data[i][4],
+                        'floor': data[i][5],
+                        'area': ((data[i][13] * 10000) / data[i][14] * 0.3025).toFixed(2),
+                        'age': data[i][11],
+                        'real_id': data[i][0]
+                     
+                    };  // data to send to server.
+                    $.post('/js_search', data_f, function (data_fake) {
+                        if (data_fake != null) {
+                            //alert(data[i][0]);
+                            for (i = 0; i < data_fake.length; i++) {
+                                //var table = document.getElementById("houseinfo_real");
+                              
+                                //var row = table
+                                //var row = table.insertRow(0);
+                                var row = document.createElement("tr");
+                                row.setAttribute("class", "collapse " + data_fake[i][19]);
+                                row.setAttribute("id", "openingprice");
+                                row.setAttribute("bgcolor", "#FF0000");
+                                var cell_null = row.insertCell(0);
+                                var cell_createtime = row.insertCell(1);
+                                cell_createtime.setAttribute("data-title","建立時間");
+                                var cell_region = row.insertCell(2);
+                                cell_region.setAttribute("data-title","縣市");
+                                var cell_section = row.insertCell(3);
+                                cell_section.setAttribute("data-title","轄區");
+                                var cell_type = row.insertCell(4);
+                                cell_type.setAttribute("data-title","形態");
+                                var cell_room = row.insertCell(5);
+                                cell_room.setAttribute("data-title","格局");
+                                var cell_floor = row.insertCell(6);
+                                cell_floor.setAttribute("data-title","樓層");
+                                var cell_area = row.insertCell(7);
+                                cell_area.setAttribute("data-title","權狀");
+                                var cell_age = row.insertCell(8);
+                                cell_age.setAttribute("data-title","屋齡");
+                                var cell_address = row.insertCell(9);
+                                cell_address.setAttribute("data-title","地址");
+                                var cell_price = row.insertCell(10);
+                                cell_price.setAttribute("data-title","開價");
+                                cell_createtime.innerHTML =toDateTime(data_fake[i][16]).toLocaleDateString();
+                                //cell_createtime.innerHTML = data_fake[i][16];
+                                cell_region.innerHTML = data_fake[i][3];
+                                cell_section.innerHTML = data_fake[i][4];
+                                cell_type.innerHTML = data_fake[i][2];
+                                cell_room.innerHTML = data_fake[i][6];
+                                cell_floor.innerHTML = data_fake[i][8];
+                                cell_area.innerHTML = data_fake[i][10];
+                                cell_age.innerHTML = data_fake[i][11];
+                                cell_address.innerHTML = data_fake[i][12];
+                                cell_price.innerHTML = data_fake[i][14];
+                                $(row).insertAfter( "#"+data_fake[i][19] );
+                            }
+                        }
+                    });
+                }
+            });
+        };
+                /*
+                var table_length = document.getElementById("houseinfo_real").rows.length;
+                document.getElementById("houseinfo_real").deleteRow(table_length-1);
+
+                $('#nav_real').empty();
+
+                var rowsShown = 10;
+                var rowsTotal = document.getElementById("houseinfo_real").rows.length;
+                var numPages = Math.ceil(rowsTotal / rowsShown);
+                for(var i=0;i<numPages;i++){
+                   var pageNum=i+1;
+                   $('#nav_real').append('<a href="#real_top" rel="'+i+'">'+pageNum+'</a>&nbsp;');
+                }
+
+                $('#houseinfo_real tr').hide();
+                $('#houseinfo_real tr').slice(0,rowsShown).show();
+                $('#nav_real a:first').addClass('active');
+
+
+                $('#nav_real a').bind('click', function (e) {
+                     
+                     $('#nav_real a').removeClass('active');    //移除所有頁碼的active類
+                     $(this).addClass('active');           //為當前頁碼加入active類
+                     var currPage=$(this).attr('rel');     //取出頁碼上的值
+                     var startItem=currPage*rowsShown;     //行數的開始=頁碼*每頁顯示的行
+                     var endItem=startItem+rowsShown;      //行數的結束=開始+每頁顯示的行
+                     $('#houseinfo_real tr').hide();                 //全部行都隱藏
+         
+                     //顯示從開始到結束的行
+                    $('#houseinfo_real tr').slice(startItem, endItem).css('display', 'table-row');
+                    //alert("T");
+                    //var top = document.getElementById("tt_123").offsetTop; //Getting Y of target element
+                    //window.scrollTo(0, top);                        //Go there directly or some transition
+                     //e.stopPropagation();
+                    //return false;
+                 });*/
+        /*$(document).ready(function ()
+        {
+            $(".sticky-header tr").floatThead({
+                scrollingTop: 50
+            });
+        });*/
+        /*
+        $(".css_tr.focus").floatThead({
+	        position: 'fixed'
+        });*/
+
+
+        var wrap = $("#wrap");
+
+        wrap.on("scroll", function (e) {
+            alert("H");
+          if (this.scrollTop > 147) {
+            wrap.addClass("fix-search");
+          } else {
+            wrap.removeClass("fix-search");
+          }
+  
+        });
+    </script>
+
+  </body>
+</html>

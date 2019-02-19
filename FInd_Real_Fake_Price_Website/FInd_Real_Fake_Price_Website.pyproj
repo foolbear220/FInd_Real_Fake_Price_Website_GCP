@@ -43,14 +43,17 @@
     <Folder Include="FInd_Real_Fake_Price_Website\SQL_Module\" />
     <Folder Include="FInd_Real_Fake_Price_Website\static\" />
     <Folder Include="FInd_Real_Fake_Price_Website\static\css\" />
+    <Folder Include="FInd_Real_Fake_Price_Website\static\csv\" />
     <Folder Include="FInd_Real_Fake_Price_Website\static\img\" />
     <Folder Include="FInd_Real_Fake_Price_Website\static\js\" />
     <Folder Include="FInd_Real_Fake_Price_Website\templates\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FInd_Real_Fake_Price_Website\app.yaml">
-      <SubType>Code</SubType>
-    </Content>
+    <None Include="FIndRealFakePriceWebsiteV2 - Web Deploy.pubxml" />
+    <Content Include="FInd_Real_Fake_Price_Website\static\csv\opendata107road.csv" />
+    <Content Include="FInd_Real_Fake_Price_Website\static\csv\opendata107road_UTF8.csv" />
+    <Content Include="__web.config" />
+    <Content Include="web.config" />
     <Content Include="FInd_Real_Fake_Price_Website\static\css\style.css" />
     <Content Include="FInd_Real_Fake_Price_Website\static\img\fake.png" />
     <Content Include="FInd_Real_Fake_Price_Website\static\img\lg.dna-spin-spiral-preloader.gif" />
